@@ -32,8 +32,28 @@ def home():
     msg1 = "<h1>Welcome to TSI Vet!</h1><p>1) Click <a href='/api/somearea/vetcustomers/all')>here</a> to view all the pets and owners details.</p>"
     msg2 = "2) Click <a href='/api/somearea/vetcustomers/zoe')>here</a> to view all the pets owned by Zoe.</p>"
     msg3 = "3) Click <a href='/api/somearea/vetcustomers/ahmed')>here</a> to view all the pets owned by Ahmed.</p>"
-    # msg4 = "<p>Just typing this to check if the auto deployment works</p>"
-    return msg1 + "\n\n" + msg2 + "\n\n" + msg3 #+ "\n\n" + msg4  #what the api returns
+    msg4 = ("""
+4) This drop down menu returns customers and pets details by choosing customer's ID.
+<select onChange="window.location.href=this.value">
+    <option value="/">-</option>
+        <option value="/api/somearea/vetcustomers/customer?customer_id=0">0</option>
+        <option value = "/api/somearea/vetcustomers/customer?customer_id=1">1</option>
+        <option value = "/api/somearea/vetcustomers/customer?customer_id=2">2</option>
+        <option value = "/api/somearea/vetcustomers/customer?customer_id=3">3</option>
+</select>
+""")
+    msg5 = ("""<br><br>
+5) This drop down menu returns customers and pets details by choosing pet types.
+<select onChange="window.location.href=this.value">
+    <option value="/">-</option>
+        <option value="/api/somearea/vetcustomers/pet-type?petType=Cat">Cat</option>
+        <option value = "/api/somearea/vetcustomers/pet-type?petType=Dog">Dog</option>
+        <option value = "/api/somearea/vetcustomers/pet-type?petType=Panda">Panda</option>
+        <option value = "/api/somearea/vetcustomers/pet-type?petType=Bird">Bird</option>
+</select>
+""")
+    return msg1 + "\n\n" + msg2 + "\n\n" + msg3 + "\n\n" + msg4 + "\n\n" + msg5  #what the api returns
+
 
 # A route to return all of the available entries in our collection 
 # of pet owners.
