@@ -34,7 +34,7 @@ def home():
     msg2 = "2) Click <a href='/api/somearea/vetcustomers/zoe')>here</a> to view all the pets owned by Zoe.</p>"
     msg3 = "3) Click <a href='/api/somearea/vetcustomers/ahmed')>here</a> to view all the pets owned by Ahmed.</p>"
     msg4 = "<p>Just typing this to check if autodeployment works</p>"
-    return msg1 + "\n\n" + msg2 + "\n\n" + msg3  #what the api returns
+    return msg1 + "\n\n" + msg2 + "\n\n" + msg3 + "\n\n" + msg4  #what the api returns
 
 # A route to return all of the available entries in our collection 
 # of pet owners.
