@@ -9,7 +9,6 @@ app.config["DEBUG"] = True
 # Create some test data for our program.  
 # In the real world we would want this to 
 # be made or come from another source such 
-# as a database
 
 petObjectsFile = open("Objects.txt", "r")
 readfile = petObjectsFile.readlines() 
@@ -33,7 +32,7 @@ def home():
     msg1 = "<h1>Welcome to TSI Vet!</h1><p>1) Click <a href='/api/somearea/vetcustomers/all')>here</a> to view all the pets and owners details.</p>"
     msg2 = "2) Click <a href='/api/somearea/vetcustomers/zoe')>here</a> to view all the pets owned by Zoe.</p>"
     msg3 = "3) Click <a href='/api/somearea/vetcustomers/ahmed')>here</a> to view all the pets owned by Ahmed.</p>"
-    msg4 = "<p>Just typing this to check if autodeployment works</p>"
+    msg4 = "<p>Just typing this to check if the autodeployment works</p>"
     return msg1 + "\n\n" + msg2 + "\n\n" + msg3 + "\n\n" + msg4  #what the api returns
 
 # A route to return all of the available entries in our collection 
